@@ -20,7 +20,20 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+def check_string (one_str, two_str):
+    if type(one_str) is not str or type(two_str) is not str:
+        return '0'
+    elif one_str == two_str:
+        return '1'
+    elif len(one_str) >= len(two_str)and two_str != 'learn':
+        return '2'
+    elif one_str != two_str and two_str == 'learn':
+        return '3'
+   
+one_str = 'test_test'
+two_str = 'learn'
+print(check_string(one_str, two_str))
+    
     
 if __name__ == "__main__":
     main()
